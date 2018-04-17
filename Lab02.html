@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>I don't konw</title>
-    <style type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+   <!-- <style type="text/css">
         body {
             background-color: #E8EAF6;
             width: 800px;
@@ -86,68 +87,94 @@
         a.a.e:visited{color:#00FF00;}
         a.a.e:hover{color:white; background-color:#F50057;}
     </style>
+    -->
 </head>
-<body>
-<section class="blue1">
-<div class="blue2">
+<body class="container">
+<div class="row">
+<div class="col-md-5">
     <h1 >Share Your Travels</h1><br>
     <h5><i>Let us know where you've been</i></h5>
 </div>
-    <div class="blue3">
-        <a class="a e"  href="" style="margin-right: 0.3em;">Description </a>
-        <a class="a e"  href="" style="margin:0 0.3em;">Related Photos </a>
-        <a class="a e"  href="" style="margin-left: 0.3em;">Reviews</a>
+    <div class="col-md-2">
+        <a href="Lab04.html">Upload </a>
     </div>
-</section>
-<section class="white">
-    <section class="white1">
-<div class="center1">
-    <h4>NEW YORK - CENTRAL PARK</h4>
+    <div class="col-md-3">
+        <a href="">Related Photos </a>
+    </div>
+    <div class="col-md-2">
+        <a href="">Reviews</a>
+    </div>
 </div>
-        <img src="images/central-park.jpg" width="100%" height="10%"/>
-        <br>
-        <div class="center2">
-        <p style="color: #7990A3;"><i>Conservatory Pond in Central Park</i></p>
-        </div>
-        <div class="center3">
-            <P style=" margin-bottom:1em;"><b>This photo of Conservatory Pond in <a class="a" href="">Central Park </a>in <a href="" class="a">New York City </a>was taken on October 22,2016 with
+    <div class="row">
+<div class="col-md-9">
+    <h4>NEW YORK - CENTRAL PARK</h4>
+        <img src="images/central-park.jpg"/>
+        <p><i>Conservatory Pond in Central Park</i></p>
+            <P><b>This photo of Conservatory Pond in <a href="">Central Park </a>in <a href="" >New York City </a>was taken on October 22,2016 with
                 a Canon EOS 30D camera.</b></P>
-            <div class="center3-1">
-    <p id="location">
+        </div>
+<div class="col-md-3">
+    <div>
+    <h6>RELATED PHOTOS</h6>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/related-square1.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/related-square2.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/related-square3.jpg">
+            </div>
+        </div>
+    </div>
+    <div>
+    <h6>Reviews</h6>
+    <div>
+        Ricardo<br>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo1">2016-05-23</button>
+        <div id="demo1" class="collapse">
+            Easy on the HDR buddy.
+        </div>
+    </div>
+        <div>
+            Susan<br>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">2016-11-18</button>
+            <div id="demo" class="collapse">
+                I love Central Park.
+            </div>
+        </div>
+</div>
+</div>
+    </div>
+<div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-3">
         <img src="images/icon_download.png"/>
         <img src="images/icon_mail.png"/>
         <img src="images/icon_map.png"/>
         <img src="images/icon_up.png"/>
         <img src="images/icon_down.png"/>
-    </p>
-        </div>
-        </div>
-</section>
-<section class="white1">
-<div class="center4">
-    <h3>RELATED PHOTOS</h3>
+    </div>
+    <div class="col-md-3"></div>
 </div>
-    <img src="images/related-square1.jpg" width="150" height="150"/>
-    <img src="images/related-square2.jpg" width="150" height="150"/>
-    <img src="images/related-square3.jpg" width="150" height="150"/>
-</section>
-<section class="white1">
-    <div class="center4">
-    <h3>Reviews</h3>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-2"><a href="">Home</a></div>
+    <div class="col-md-2"><a href="">Browse</a></div>
+    <div class="col-md-2"><a href="">Search</a></div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+       Copyright &copy Share your travel
     </div>
-    <div class="center5">
-        <p style="margin:0.5em 0;font-style: italic;line-height:0.5em;"> <span class="b">By Ricardo on</span> <span class="c">2016-05-23</span></p>
-        <br><p style="margin-bottom: 0.5em; line-height:0.5em;"><b>Easy on the HDR buddy.</b></p>
-    <hr>
-        <p style="margin:0.5em 0;font-style: italic;line-height:0.5em;"><span class="b">By Susan on</span> <span class="c">2016-11-18</span></p>
-        <br><p style="margin-bottom: 0.5em;line-height:0.5em;"><b>I love Central Park.</b></p>
-    <hr>
-    </div>
-</section>
-</section>
-<footer class="foot">
-    <h4 style="margin-bottom: 0.6em;"><a class="a" href="">Home</a> | <a class="a" href="">Browse</a> | <a class="a" href="">Search</a></h4>
-    <br><h4><i>Copyright &copy 2017 Share Your Travels</i></h4>
-</footer>
+    <div class="col-md-4"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
 </body>
 </html>

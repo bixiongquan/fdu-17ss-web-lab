@@ -3,87 +3,89 @@
 <head >
    <meta charset="utf-8">
    <title>Lab 04</title>
-   <link rel="stylesheet" href="./css/reset.css" />
-   <link rel="stylesheet" href="./css/Lab04.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 <body>
-<header>
+
+<div class="row">
+    <div class="col-md-5">
      <h1>Share Your Travels</h1>
      <p>let us know where you've been</p>
-</header>
-<main>
-   <section>
+    </div>
+    <div class="col-md-2"><a href="Lab02.html">Gallery</a></div>
+    <div class="col-md-3"><a href="">Feeling lucky</a></div>
+    <div class="col-md-2"><a href="">User</a></div>
+</div>
+<div class="row">
+<div class="container">
+
    <form>
        <fieldset>
            <legend>PHOTO DETAILS</legend>
-           <table>
-               <tr>
-                   <td colspan="2">
+           <table class="table">
+              <tr><td>
                        Title<br>
-                       <input size="93" type="text" name="titlename" value="Give your photo a desciptive name"/>
-                       <br>Description<br>
-                       <textarea cols="95" rows="3">Adding a rich description will help with search result</textarea>
-                   </td>
+                       <input type="text" name="titlename" value="Give your photo a desciptive name"/></td>
                </tr>
-               <tr>
-                   <td>
-                       Cotinent<br>
-                       <select style="width:18em;">
+
+           <tr><td>CDescription<br>
+                           <textarea>Adding a rich description will help with search result</textarea></td>
+                       </tr>
+              <tr>
+                  <td>
+                       Continent<br>
+                       <select>
                            <option value="">Choose continent</option>
                            <option value="Africa">Africa</option>
                            <option value="Europe">Europe</option>
                            <option value="America">America</option>
-                       </select><br>
-                       Country<br>
-                       <select style="width:18em;">
+                       </select></td></tr>
+                       <tr><td>Country<br>
+                       <select>
                            <option value="">Choose continent</option>
                            <option value="China">China</option>
                            <option value="UK">UK</option>
                            <option value="USA">USA</option>
-                       </select><br>
-                       City<br>
-                       <input size="33"/>
-                   </td>
+                       </select></td>
+                     </tr>
+                      <tr><td>City<br>
+                          <input size="33"/></td>
+
+                      </tr>
+                   <tr><td>
+                       Copyright<br><input type="radio">All rights reserved<br><input type="radio" checked="checked">All rights reserved</td></tr>
+                       <tr><td>
+                           Copyright<br><input type="checkbox">Attribution<br><input type="checkbox">Noncommercial<br><input type="checkbox">No Derivative Woeks</td>
+                       </tr>
+                  <tr>
+
+                       <td>I accept the software license<input type="checkbox"/></td>
+               </tr>
+           <tr>
                    <td>
-                       <div style="margin:1em 0.5em 2px 0;border:cornflowerblue solid thin;padding:0.5em;">
-                           <p>Copyright<br><input type="radio">All rights reserved<br><input type="radio" checked="checked">All rights reserved<br></p>
-                       </div>
-                       <div style="margin:1em 0.5em 1em 0;border:cornflowerblue solid thin;padding:0.5em;">
-                           <p>Copyright<br><input type="checkbox">Attribution<br><input type="checkbox">Noncommercial<br><input type="checkbox">No Derivative Woeks</p>
-                       </div>
-                   </td>
-               </tr>
-               <tr style="padding:0 1em;">
-                   <td colspan="2" >
-                       <div style="background-color:cornflowerblue; margin:0 0.5em;">I accept the software license<input type="checkbox"/></div></td>
-               </tr>
-               <tr>
-                   <td>
-                       Rate this photos:<br><input type="text" value=""/><br>
-                       Color Collection:<br><input type="color" value=""/><br>
-                   </td>
-                   <td>
-                       <div style="margin:0.5em;padding:1em 0 0.5em 0.5em;border:solid thin cornflowerblue">
-                           Date Taken:<br><input type="date" value=""/><br>
-                           Time Taken:<br><input type="time" value=""/><br>
-                       </div>
-                   </td>
-               </tr>
-               <tr>
-               <tr style="padding:0 1em;">
-                   <td colspan="2" >
-                       <div style="background-color:cornflowerblue; margin:0 0.5em;padding:0.5em;">
-                           <input type="submit" value="submit" style="padding:0.5em 1em;margin:0 1em;background-color:deeppink;border:deeppink solid thin"/>
-                           <input type="reset" value="Clear Form" style="padding:0.5em 1em;background-color:deeppink;border:deeppink solid thin"/>
-                       </div>
-                   </td>
-               </tr>
+                       Rate this photos:<br><input type="text" value=""/><br></td>
+                       <td>
+                       Color Collection:<br><input type="color" value=""/><br></td>
+                  </tr>
+                   <tr>
+                       <td>
+                           Date Taken:<br><input type="date" value=""/><br></td>
+                       <td>Time Taken:<br><input type="time" value=""/><br>
+                       </td>
+                   </tr>
+              <tr>
+                       <td>
+                           <input type="submit" value="submit"/>
+                        <input type="reset" value="Clear Form"/>
+                       </td>
+              </tr>>
            </table>
        </fieldset>
    </form>
-   </section>
-</main>  
-
-
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
