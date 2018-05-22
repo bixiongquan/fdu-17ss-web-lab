@@ -1,29 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link type="text/css" rel="stylesheet" href="css/Lab07.css">
-    <script src="js/Lab07.js"></script>
+    <meta charset="utf-8">
+    <title>lab07</title>
+    <link rel="stylesheet" href="css/Lab07.css">
+    <script src="js/Lab07.js" defer = "defer"></script>
 </head>
 <body>
-<form name="form" id="form">
-    <select name="box1" id="box1" onchange="r1()">
-        <option value="SELECT ONE" id="o1">SELECT ONE</option>
-        <option value="CREATE TABLE" id="o2">CREATE TABLE</option>
-        <option value="ADD ROW" id="o3">ADD ROW</option>
-        <option value="DELETE ROW" id="o4" >DELETE ROW</option>
-        <option value="DELETE TABLE" id="o5">DELETE TABLE</option>
-    </select>
-    <div id="a1"></div>
-    <div id="a2"></div>
-    <div id="a3"></div>
-    <select name="box2" id="box2">
-        <option value="">SELECT</option>
-        <option value="originTable1">originTable</option>
-    </select>
-    <div id="a4"></div>
+<section>
+    <form action="">
+        <select name="" id="select1">
+            <option value = "selectOne">Select one</option>
+            <option value = "createTable">Create table</option>
+            <option value = "addRow">Add row</option>
+            <option value = "delRow">Delete row</option>
+            <option value = "delTable">Delete table</option>
+        </select>
+        <div class="tbCreate">
+            <div class="aboutTb">
+                <input type="text" placeholder="Table Name" id="tbName">
+                <input type="number" placeholder="Columns Numbers" id="colNum">
+            </div>
+            <div class="inputs">
 
-</form>
+            </div>
+        </div><br>
+        <button>commit</button><br>
+        <select name="" id="select2">
+            <option value="select">Select</option>
+        </select>
+    </form>
+    <div class="infor">
+
+    </div>
+    <div class="lay-table">
+
+    </div>
+</section>
 </body>
 </html>

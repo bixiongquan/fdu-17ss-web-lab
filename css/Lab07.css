@@ -1,52 +1,53 @@
-body, div, form, table, th, tr, td, section, button, option, input{
-    padding:0;
-    margin:0;
-    text-align:center;
+body{
+    min-width: 600px;
 }
-select, option, button{
-    width:300px;
+form{
+    text-align: center;
 }
-th{
-    color:whitesmoke;
-    background-color:grey;
-    height:30px;
+section{
+    text-align: center;
+    width: 100%;
+}
+select,button{
+    height: 30px;
+    border-radius: 5px;
+    width: 300px;
+}
+button{
+    display: none;
+}
+.tbCreate{
+    display: none;
+}
 
+select{
+    margin-top: 50px;
 }
-td{
-    padding:0 0.5em;
-}
-.odd{
-    background-color:lightgrey;
-}
-div{
-    margin:auto;
-}
-#a2{
-    width:500px;
-    height:50px;
-}
-#a2 table{
-    height:30px;
-}
-#a4{
-    width:500px;
-    height:500px;
-}
-td{
-    border:1px solid black;
-    height:30px;
+
+.aboutTb input{
+    width: 140px;
+    margin-right: 8px;
 }
 table{
-    width:498px;
+    margin-left: auto;
+    margin-right: auto;
 }
-#a1{
-    width:300px;
+table thead th{
+    background-color: grey;
+    color: whitesmoke;
+    min-width: 40px;
+}
+td{
+    padding: 0 0.5em;
+}
+input{
+    margin-top: 10px;
+    margin-right: 10px;
     height:30px;
 }
-#a1 input{
-    width:140px;
-    margin:0 2px;
+.grey {
+    background-color: lightgrey;
 }
-div{
-    margin:auto;
+.infor{
+    color: red;
 }
