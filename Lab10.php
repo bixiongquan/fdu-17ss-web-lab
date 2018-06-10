@@ -3,7 +3,11 @@
 
 //****** Hint ******
 //connect database and fetch data here
+$con = new mysqli("localhost","","");
 
+if(!$con){
+    die("connect error" . $con->connect_error);
+}
 
 ?>
 
@@ -44,6 +48,9 @@
                 <?php
                 //Fill this place
 
+                $sql = "SELECT * FROM Continents";
+                $result=$con->query($sql);
+
                 //****** Hint ******
                 //display the list of continents
 
@@ -58,6 +65,11 @@
                 <option value="0">Select Country</option>
                 <?php 
                 //Fill this place
+                $sql = "SELECT * FROM Countries";
+                $result=$con->query($sql);
+                while($row = $result->fetch_assoc()) {
+                    echo '<option value=' . $row['ISO'] . '>' . $row['CountryName'] . '</option>';
+                }
 
                 //****** Hint ******
                 /* display list of countries */ 
@@ -89,7 +101,39 @@
                 </div>
               </a>
             </li>        
-            */ 
+            */
+
+            $continent= isset($_GET["continent"]) ? trim($_GET["continent"]) : "none";
+            $country = isset($_GET["country"]) ? trim($_GET["country"]) : "none";
+            $sql = "SELECT * FROM ImageDetails";
+            if($continent != "none" && $country != "none"){
+                $sql.="WHERE CountryCodeISO=".$country."and ContinentCode=".$continent;
+            }else if($continent != "none" && $country = "none"){
+                $sql.="WHERE ContinentCode=".$continent;
+            }else if($continent = "none" && $country != "none"){
+                $sql.="WHERE CountryCodeISO=".$country;
+            } else{
+
+            }
+            $result=$con->query($sql);
+            while($row = $result->fetch_assoc()) {
+                echo'<li>
+              <a href="detail.php?id='.$row["ImageId"].'" class="img-responsive">
+                <img src="images/square-medium/'.$row["path"].'" alt="'.$row["Title"].'">
+                <div class="caption">
+                  <div class="blur"></div>
+                  <div class="caption-text">
+                    <p>'.$row[Descripton].'</p>
+                  </div>
+                </div>
+              </a>
+            </li> ';          ;
+            }
+
+
+
+
+
             ?>
        </ul>       
 

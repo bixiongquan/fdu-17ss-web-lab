@@ -1,20 +1,20 @@
-let btn = document.getElementsByTagName("button")[0];
+let select2 = document.getElementById("select2");//第二个选框
 
-let colNum = document.getElementById("colNum");
+let select1 = document.getElementById("select1");//第一个选框
 
-let inputs = document.querySelector(".inputs");
+let btn = document.getElementsByTagName("button")[0];//submit按钮
 
-let tbCreate = document.querySelector(".tbCreate");
+let colNum = document.getElementById("colNum");//number
 
-let layTable = document.querySelector(".lay-table");
+let tbCreate = document.querySelector(".tbCreate");//text和number及.input所在区
+
+let aboutTb = document.querySelector(".aboutTb");//text和number
+
+let inputs = document.querySelector(".inputs");//放置select1建的表格
+
+let layTable = document.querySelector(".lay-table");//select2下面显示table的区域
 
 let infor = document.querySelector(".infor");
-
-let select2 = document.getElementById("select2");
-
-let select1 = document.getElementById("select1");
-
-let aboutTb = document.querySelector(".aboutTb");
 
 let columnsInput = [];//储存输入框信息
 
@@ -37,7 +37,7 @@ colNum.onchange = function(){
 
 //显示一定数量的输入框
 function showInput(number, ths = []){
-    while(inputs.hasChildNodes()) //当aboutColumn下还存在子节点时 循环继续
+    while(inputs.hasChildNodes()) //清空input区域，后面添加表格
     {
         inputs.removeChild(inputs.firstChild);
     }
@@ -49,6 +49,7 @@ function showInput(number, ths = []){
         columnsInput[i].style.width = 140 + "px";
         columnsInput[i].style.height = "30px";
         inputs.appendChild(columnsInput[i]);
+
     }
 }
 
@@ -61,10 +62,10 @@ select1.onchange = function(){
             infor.innerHTML = "";
             break;
         case "createTable":
-            aboutTb.getElementsByTagName("input")[0].value = "";
-            aboutTb.getElementsByTagName("input")[1].value = "";
             tbCreate.style.display = "block";
             aboutTb.style.display = "block";
+            aboutTb.getElementsByTagName("input")[0].value = "";
+            aboutTb.getElementsByTagName("input")[1].value = "";
             inputs.style.display = "none";
             infor.innerHTML = "";
             break;
@@ -234,9 +235,10 @@ function handleTaName(tableName){
     return tableName + count;
 }
 
-//展现表格
+//显示表格
 function showTable(table){
-    if(layTable.firstChild)
+    //清空layTable区域，后面添加table
+    if(layTable.hasChildNodes())
         layTable.removeChild(layTable.firstChild);
     if(select2.value === "select")
         return;//传入表格对象无效
